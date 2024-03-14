@@ -1,4 +1,5 @@
 <script setup>
+import AppHeader from './components/AppHeader.vue';
 import { ref } from 'vue';
 
 const todos = ref([])
@@ -17,6 +18,7 @@ const removeTodo = (index) => {
 </script>
 
 <template>
+  <AppHeader color="blue">SLOT</AppHeader>
   <input type="text" size="30" v-model="newTodo">
   <button @click="addTodo">追加</button>
   <ul v-if="todos.length > 0">
